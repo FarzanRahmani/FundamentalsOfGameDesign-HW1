@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class RoadManager : MonoBehaviour
 {
+
     public GameObject roadPrefab; // Reference to the road prefab
+
     public Transform car; // Reference to the car object
+
 
     //private List<GameObject> activeRoads = new List<GameObject>(); // List to store active road sections
     private List<GameObject> activeRoads = new List<GameObject>(); // List to store active road sections
+
     private float sectionLength = 202f; // Length of each road/tunnel section
 
     private void Start()
@@ -17,6 +21,8 @@ public class RoadManager : MonoBehaviour
         // Initialize by creating initial road and tunnel sections
         activeRoads.Add(roadPrefab);
     }
+
+
 
     private void Update()
     {
@@ -46,6 +52,7 @@ public class RoadManager : MonoBehaviour
 
             newRoad.gameObject.tag = "EndTunnel";
 
+
         // Find the child object named "Tunnel" within the parent object
         Transform tunnel = newRoad.transform.Find("Tunnel");
         if (tunnel != null)
@@ -54,6 +61,10 @@ public class RoadManager : MonoBehaviour
         }
 
         activeRoads.Add(newRoad);
+
     }
+
+
+
 
 }
