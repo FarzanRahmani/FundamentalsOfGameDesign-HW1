@@ -9,7 +9,7 @@ public class TunnelTrigger : MonoBehaviour
     [SerializeField]
     public Light rightLight; // Reference to the right light
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // lighting logic
     {
         if (other.CompareTag("Tunnel")) // Assuming the car has a "Car" tag
         {
