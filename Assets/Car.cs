@@ -18,7 +18,6 @@ public class Car : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-            //Debug.Log("Hello, World");
             transform.Translate(Time.deltaTime * new Vector3(0, 0, moveSpeed));
         }
         if (Input.GetKey(KeyCode.W))
